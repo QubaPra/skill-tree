@@ -4,6 +4,13 @@
   justify-content: center;
   text-align: center;
 }
+#clear-storage {
+	position: center;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 #square {
   width: 100px;
   height: 100px;

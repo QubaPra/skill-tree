@@ -17,16 +17,19 @@ for (var i = 0; i < squares.length; i++) {
     }
     squares[i].addEventListener("click", function() {
       if (moneyValue >= 10) {
-        if (this.style.backgroundColor === "red") {
-          this.style.backgroundColor = "blue";
-          moneyValue -= 10;
-          money.innerHTML = "Feniksy has: $" + moneyValue;
-          localStorage.setItem("money", moneyValue);
-          localStorage.setItem(this.id, "blue");
-          this.removeEventListener("click", arguments.callee);
-        } else {
-          this.style.backgroundColor = "red";
-          localStorage.setItem(this.id, "red");
+        var confirmBuy = confirm("Are you sure you want to buy this skill for $10?");
+        if(confirmBuy){
+          if (this.style.backgroundColor === "red") {
+            this.style.backgroundColor = "blue";
+            moneyValue -= 10;
+            money.innerHTML = "Feniksy has: $" + moneyValue;
+            localStorage.setItem("money", moneyValue);
+            localStorage.setItem(this.id, "blue");
+            this.removeEventListener("click", arguments.callee);
+          } else {
+            this.style.backgroundColor = "red";
+            localStorage.setItem(this.id, "red");
+          }
         }
       }else{
         alert("You have not enough money to buy this skill");
@@ -34,3 +37,8 @@ for (var i = 0; i < squares.length; i++) {
     });
   }
 }
+var clearButton = document.getElementById("clear-storage");
+clearButton.addEventListener("click", function(){
+  localStorage.clear();
+  location.reload();
+});
