@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+#square {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#square:before {
+  content: "Skill";
+  color: white;
+  font-size: 20px;
+}
+#square-1 {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#square-1:before {
+  content: "Skill 1";
+  color: white;
+  font-size: 20px;
+}
+#square-2 {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#square-2:before {
+  content: "Skill 2";
+  color: white;
+  font-size: 20px;
+}
+#square-3 {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#square-3:before {
+  content: "Skill 3";
+  color: white;
+  font-size: 20px;
+}
+#money-feniksy {
+  margin-right: 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+#money-gryfy {
+  margin-left: 10px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
